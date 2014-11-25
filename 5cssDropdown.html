@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="3content.css"/>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li:hover { /* todo: active, link, visited */
+            background-color: #eee;
+            cursor: pointer;
+        }
+
+        nav {
+            background-color: #ccc;
+            overflow: auto;
+            border: 1px solid gray;
+        }
+
+        nav > ul > li {
+            display: inline-block;
+            float: left;
+            padding: 0.5em 0.75em;
+        }
+
+        nav > ul > li.settings {
+            float: right;
+            width: 8.75em;
+        }
+
+        nav > ul > li.settings > ul {
+            display: none;
+        }
+
+        nav > ul > li.settings:hover > ul {
+            display: inline-block;
+            border: 1px solid white;
+        }
+
+        nav > ul > li.settings:hover > ul > li {
+            padding: 0.5em 0.75em;
+        }
+
+        nav > ul > li.settings:hover > ul > li:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li class="settings">Settings
+                <ul>
+                    <li>My profile</li>
+                    <li>Account Settings</li>
+                    <li>Payment</li>
+                    <li>Logout</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

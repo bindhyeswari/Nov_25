@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            padding: 1em;
+
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+        div.parent div { /* 0 0 1 2 */
+            background-color: rgba(0, 128, 0, 0.54);
+        }
+
+        li.second + li {
+            background-color: yellow;
+        }
+
+        div.square, div.rectangle {
+            background-color: red;
+        }
+
+
+
+        /*
+            > Child
+            <space> Descendant
+            + Adjacent sibling combinator
+            , Grouping combinator
+        */
+
+        /*div.child.someclass { *//* 0 0 2 1 *//*
+            background-color: black;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="parent">
+        Parent
+        <div class="child someclass">
+            Child
+            <div class="descendant">
+                Descendant
+            </div>
+        </div>
+    </div>
+    <ul>
+        <li>Rice Li</li>
+        <li class="second">Andy Quach</li>
+        <li>Evan Corley</li>
+    </ul>
+</body>
+</html>

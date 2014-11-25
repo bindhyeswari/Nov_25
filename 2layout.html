@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        span {
+            background-color: #312389;
+            padding: 0.5em; /* 1em = 16px - Default for Firefox Chrome */
+            color: white;
+        }
+
+        div.parent {
+            font-size: 1em;
+            padding: 1em 2em 1em 2em; /* top right bottom left*/
+        }
+
+        div.child {
+            font-size: 0.5em;
+            padding: 1em 2em; /* top/bottom right/left */
+        }
+
+        div.desc {
+            font-size: 0.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <span>Rice Li</span>
+    <span>Da Feng</span>
+    <span>Andy Quach</span>
+
+    <div style="font-size: 3em;">iiiii</div>
+    <div style="font-size: 1em;">MMMMMM</div>
+
+    <div class="parent">
+        asdfasdfasdf
+        <div class="child">
+            Child
+            <div class="desc">
+                Descendant
+            </div>
+        </div>
+    </div>
+</body>
+</html>

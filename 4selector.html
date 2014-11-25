@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="3content.css"/>
+    <style>
+        .square { /* class selector */ /* 0 0 1 0 */
+            background-color: pink;
+        }
+        div.square { /* class selector */ /* 0 0 1 1 */
+            background-color: black;
+        }
+
+        #div1 { /* id selector */
+            background-color: darkred;
+        }
+
+        [type="password"] { /* Attribute selector */
+            font-size: 3em;
+        }
+
+        div { /* Element Selector */
+            background-color: #98280c;
+            color: white;
+            height: 50px;
+            width: 50px;
+            margin: 1em;
+        }
+
+        div {
+            background-color: red; /* cascading nature of css */
+        }
+
+        div.data { /* 0 0 1 1  */
+            background-color: green;
+        }
+
+        div[class="data"] { /* 0 0 1 1 */
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>0 0 0 0</h3>
+    <h3>Inline ID Class/Attribute Element</h3>
+
+    <div class="square">
+
+    </div>
+    <div id="div1" class="square">
+
+    </div>
+    <input type="text"/>
+    <input type="password"/>
+
+    <div class="data">
+
+    </div>
+</body>
+</html>

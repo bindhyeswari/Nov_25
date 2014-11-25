@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div.container {
+            height: 400px;
+            width: 60%;
+            border: 1px solid #aaa;
+            margin: 2em auto;
+
+            position: relative;
+        }
+        div#ball {
+            background-color: #aaa;
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            top: 5px;
+            left: 5px;
+
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="ball"></div>
+    </div>
+    <script>
+        // add event listener to the ball
+            // setInterval
+                // function --> sets the top property for the ball
+
+
+
+
+
+        document.getElementById('ball').addEventListener('click', function () {
+            var ball = this, position = 5, floor = 340, top = 5; //todo: pick up the container height
+            var downwards = true;
+            var intervalid = setInterval(function () {
+
+                if (downwards) {
+                    position++;
+                    if (position > floor) {
+                        downwards = false;
+                        top += 5;
+                    } else {
+                        ball.style.top = position + 'px';
+                    }
+
+                } else {
+                    position--;
+                    if (position < top) {
+                        downwards = true;
+                        // if (condition) { clearInterval(intervalid) }
+                    } else {
+                        ball.style.top = position + 'px';
+                    }
+                }
+
+                // ball.style.top = top++ + 'px';
+            }, 1);
+        });
+
+    </script>
+
+</body>
+</html>
